@@ -20,12 +20,6 @@ while ischar(templine)
         end
     end
     
-    if ~isempty(regexp(templine(7), 'F')) % 7th digit is which seat
-        rownum = rStart;
-    else
-        rownum = rEnd;
-    end
-    
     % Determine Col
     for ii = 8:10 % First six digits are F and B
         if ~isempty(regexp(templine(ii), 'L')) % Front Half
